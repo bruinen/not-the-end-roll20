@@ -22,7 +22,7 @@ var NotTheEnd = (function()
 				var results = NotTheEnd._extractToken(white,black,count);
 				NotTheEnd._sendMessage(msg.who,results,black,white,count);
 			}else{
-			   sendChat('NTE', 'Per utilizzare il comando passare tutti i valori neccesari es. <b>!nte 3 3 2</b>, il primo numero sono i token bianchi il secondo i token neri ed il terzo il numero di token da estrarre.');
+			   sendChat('NotTheEnd', 'Per utilizzare il comando passare tutti i valori neccesari es. <b>!nte 3 3 2</b>, il primo numero sono i token bianchi il secondo i token neri ed il terzo il numero di token da estrarre.');
 			}
 		}
 	}
