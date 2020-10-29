@@ -51,8 +51,9 @@ var NotTheEnd = (function() {
         var arrowstyle = 'style="border: none; border-top: 3px solid transparent; border-bottom: 3px solid transparent; border-left: 195px solid rgb(26, 132, 64); margin-bottom: 2px; margin-top: 2px;"';
         var line = 'style="border: none; border-top: 1px solid transparent; border-bottom: 1px solid transparent; border-left: 196px solid rgb(26, 132, 64); margin-bottom: 3px; margin-top: 2px;"';
         var headstyle = 'style="color: rgb(26, 132, 64); font-size: 18px; text-align: left; font-variant: small-caps; font-family: Times, serif;"';
-
         var rishiaHtml='';
+
+
         var title='Estrazione Rischio';
         if (!rischia) {
            var title='Estrazione';
@@ -63,11 +64,17 @@ var NotTheEnd = (function() {
         var message = '<div ' + divstyle + '>' + //--
             '<div ' + headstyle + '>' + title + '</div>' + //--
             '<div ' + arrowstyle + '></div>' + //--
-            '<table>' + //--
-            '<tr><td>Positivi: </td><td ' + astyle + '><b style="color:white">' + positivi + '</b></td></tr>' + //--
-            '<tr><td>Negativi: </td><td ' + astyle + '><b style="color:black">' + negativi + '</b></td></tr>' + //--
-            '<tr><td>Estratti: </td><td ' + astyle + '><b style="color:green">' + daEstrarre + '</b></td></tr>' + //--
-            '</table>' + //--
+            '<div style="padding:10px">'+
+            '<span style=" background-color: white;border: none;color: black; padding: 10px;text-align: center;text-decoration: none;display: inline-block;font-size: 25px;border-radius: 50%;">' +
+                         positivi +
+            '</span>&nbsp;&nbsp;'+
+            '<span style=" background-color: black;border: none;color: white; padding: 10px;text-align: center;text-decoration: none;display: inline-block;font-size: 25px;border-radius: 50%;">' +
+                       negativi +
+            '</span>&nbsp;&nbsp;'+
+            '<span style="background-color: #eae9e9;background-image: url(https:\\//i.ibb.co/jgZpZyv/pattern-estratti.png);border: none;color: black; padding: 10px;text-align: center;text-decoration: none;display: inline-block;font-size: 25px;border-radius: 50%;">'+
+                         daEstrarre +
+            '</span>&nbsp;&nbsp;'+
+            '</div>'+
             '<div></div>' +
             '<div ' + headstyle + '>Risultati</div>' + //--
             '<div ' + line + '></div>' +
