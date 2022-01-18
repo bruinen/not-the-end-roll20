@@ -40,9 +40,11 @@ var NotTheEnd = (function() {
 
 
 
-            var messageErrore = 'Per utilizzare il comando passare tutti i valori neccesari' +
-                ' es. <b>!nte 3 3 2</b>, il primo numero sono i token positivi, il secondo i token negativi' +
-                ' ed il terzo il numero di token da estrarre.';
+            var messageErrore = 'To use the command, pass all necessary values' +
+                '. <b>!nte 3 3 2</b>,the first number is positive tokens, the second is negative tokens' +
+                ' and the third the number of tokens to extract.<br/>'+
+                '<b>!nte c 3 2 2</b> for the confusion.';
+
             if (args.length > 0) {
                 if (args[1] === 'r' && args.length === 5) {
                     NotTheEnd._getResults(msg.who,args, true,false);
@@ -69,12 +71,12 @@ var NotTheEnd = (function() {
         var rishiaHtml='';
 
 
-        var title='Estrazione Rischio';
+        var title='Risk draw';
         if (!rischia) {
            var title='Estrazione';
            var rDaEstrare=5-daEstrarre;
            rishiaHtml= '<div ' + line + '></div>' +
-                '<div><a href="!nte r ' + resultToReturn.positiviNelSacco + ' ' + resultToReturn.negativiNelSacco + ' ' + rDaEstrare + '">Rischia</a></div>' ;
+                '<div><a href="!nte r ' + resultToReturn.positiviNelSacco + ' ' + resultToReturn.negativiNelSacco + ' ' + rDaEstrare + '">Risk</a></div>' ;
         }
         var message = '<div ' + divstyle + '>' + //--
             '<div ' + headstyle + '>' + title + '</div>' + //--
@@ -101,8 +103,8 @@ var NotTheEnd = (function() {
             '<div ' + line + '></div>' +
             '<div>' + resultToReturn.results + '</div>' +
             '<div ' + line + '></div>' +
-            '<div><b style="color:white">Positivi(' + resultToReturn.total.positivo + ')</b></div>' +
-            '<div><b style="color:black">Negativi(' + resultToReturn.total.negativo + ')</b></div>' +
+            '<div><b style="color:white">Positive(' + resultToReturn.total.positivo + ')</b></div>' +
+            '<div><b style="color:black">Negatives(' + resultToReturn.total.negativo + ')</b></div>' +
             rishiaHtml+
             '</div>';
 
@@ -223,33 +225,33 @@ var NotTheEnd = (function() {
            isFirst=false;
 
         });
-        var macros =findObjs({ _type: 'macro', name: 'confuso' });
+        var macros =findObjs({ _type: 'macro', name: 'confusion' });
         if(macros.length===0){
 
             createObj("macro", {
                 _playerid:playerId,
                 name: "confuso",
-                action: "!nte c ?{Positivi|0} ?{Scegli la difficoltà|Facilissima,1|Facile,2|Normale,3|Difficile,4| Difficilissima,5|Quasi Impossibile,6} ?{estrai|1|2|3|4}",
+                action: "!nte c ?{Positive|0} ?{Choose the difficulty|Very easy,1|Easy,2|Normal,3|Difficile,4| Hard,5|Almost impossible,6} ?{Draw|1|2|3|4}",
                 visibleto:playersIds,
                 istokenaction: false
             });
-            sendChat('NotTheEnd', "Macro <b>confuso</b> creata!");
+            sendChat('NotTheEnd', "Macro <b>confusion</b> created!");
         }else{
-            sendChat('NotTheEnd', "Macro <b>confuso</b> gia esiste!");
+            sendChat('NotTheEnd', "Macro <b>confusion</b> already exist!");
         }
-        var macros =findObjs({ _type: 'macro', name: 'estrai-token' });
+        var macros =findObjs({ _type: 'macro', name: 'draw-token' });
         if(macros.length===0){
 
             createObj("macro", {
                 _playerid:playerId,
-                name: "estrai-token",
-                action: "!nte ?{Positivi|0} ?{Scegli la difficoltà|Facilissima,1|Facile,2|Normale,3|Difficile,4| Difficilissima,5|Quasi Impossibile,6} ?{estrai|1|2|3|4}",
+                name: "draw-token",
+                action: "!nte ?{Positive|0} ?{Choose the difficulty|Very easy,1|Easy,2|Normal,3|Difficile,4| Hard,5|Almost impossible,6} ?{Draw|1|2|3|4}",
                 visibleto:playersIds,
                 istokenaction: false
             });
-            sendChat('NotTheEnd', "Macro <b>estrai-token</b> creata!");
+            sendChat('NotTheEnd', "Macro <b>estrai-token</b> created!");
         }else{
-            sendChat('NotTheEnd', "Macro <b>Estrai token</b> gia esiste!");
+            sendChat('NotTheEnd', "Macro <b>Estrai token</b> already exist!");
         }
     }
 
