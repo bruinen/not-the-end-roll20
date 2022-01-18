@@ -1,5 +1,14 @@
 # Not The End Roll20
 
+Commands
+**!nte 3 3 2**  normal draw  !nte {positive} {negatives} {draw_tokens}
+**!nte c 3 3 2**  confusion draw  !nte {positive} {negatives} {draw_tokens}
+**!nte-createMacro** creation of 2 macros for normal draw and confusion
+
+
+
+
+
 Per utilizzare il comando passare tutti i valori neccesari
 es. **!nte 3 3 2** il primo numero sono i token positivi, il secondo i token negativi
 ed il terzo il numero di token da estrarre.
