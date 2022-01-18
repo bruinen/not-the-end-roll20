@@ -249,9 +249,9 @@ var NotTheEnd = (function() {
                 visibleto:playersIds,
                 istokenaction: false
             });
-            sendChat('NotTheEnd', "Macro <b>estrai-token</b> created!");
+            sendChat('NotTheEnd', "Macro <b>draw-token</b> created!");
         }else{
-            sendChat('NotTheEnd', "Macro <b>Estrai token</b> already exist!");
+            sendChat('NotTheEnd', "Macro <b>draw-token</b> already exist!");
         }
     }
 
