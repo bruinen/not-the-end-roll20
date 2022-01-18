@@ -73,7 +73,7 @@ var NotTheEnd = (function() {
 
         var title='Risk draw';
         if (!rischia) {
-           var title='Estrazione';
+           var title='Draw';
            var rDaEstrare=5-daEstrarre;
            rishiaHtml= '<div ' + line + '></div>' +
                 '<div><a href="!nte r ' + resultToReturn.positiviNelSacco + ' ' + resultToReturn.negativiNelSacco + ' ' + rDaEstrare + '">Risk</a></div>' ;
@@ -99,7 +99,7 @@ var NotTheEnd = (function() {
             '</span>&nbsp;&nbsp;'+
             '</div>'+
             '<div></div>' +
-            '<div ' + headstyle + '>Risultati</div>' + //--
+            '<div ' + headstyle + '>Results</div>' + //--
             '<div ' + line + '></div>' +
             '<div>' + resultToReturn.results + '</div>' +
             '<div ' + line + '></div>' +
