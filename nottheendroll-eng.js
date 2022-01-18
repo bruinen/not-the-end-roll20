@@ -230,7 +230,7 @@ var NotTheEnd = (function() {
 
             createObj("macro", {
                 _playerid:playerId,
-                name: "confuso",
+                name: "confusion",
                 action: "!nte c ?{Positive|0} ?{Choose the difficulty|Very easy,1|Easy,2|Normal,3|Difficile,4| Hard,5|Almost impossible,6} ?{Draw|1|2|3|4}",
                 visibleto:playersIds,
                 istokenaction: false
